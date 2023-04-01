@@ -7,3 +7,10 @@
 タスクの追加・進行・完了時は、プロジェクトの更新も忘れないようにしてください。
 
 https://github.com/users/7094vv4/projects/1
+
+# サイトのURL
+
+http://t094vv4.s239.xrea.com/
+
+# 必要な情報
+「XREA.COM NEW SIGNUP」というメールに書かれています
