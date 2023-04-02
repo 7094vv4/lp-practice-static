@@ -8,14 +8,16 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
     - name: 🔍 Allow IP
+      env:
+        API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
       run: |
         GLOBAL_IP=`curl inet-ip.info`
         curl -X POST https://api.xrea.com/v1/tool/ssh_ip_allow \
         -d "account=t094vv4" \
         -d "server_name=s239.xrea.com" \
-        -d "api_secret_key=${{ secrets.API_SECRET_KEY }}" \
+        -d "api_secret_key=${API_SECRET_KEY}" \
         -d "param[addr]=${GLOBAL_IP}"
-    
+
     - name: 📂 Sync files
       env:
         SSH_KEY: ${{ secrets.SSH_KEY }}
