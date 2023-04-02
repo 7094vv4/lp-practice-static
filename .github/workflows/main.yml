@@ -17,7 +17,7 @@ jobs:
         -d "param[addr]=${GLOBAL_IP}"
     
     - name: 📂 Sync files
-      env: 
+      env:
         SSH_KEY: ${{ secrets.SSH_KEY }}
       run: |
         sleep 300
